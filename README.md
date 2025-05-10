@@ -171,8 +171,8 @@ WHERE issued_emp_id = 'E101';
 
 ```sql
 SELECT 
-            issued_emp_id
-            -- COUNT(issued_id) as total_book_issued
+	issued_emp_id
+	-- COUNT(issued_id) as total_book_issued
 FROM issued_status
 GROUP BY issued_emp_id
 HAVING COUNT(issued_id) > 1
@@ -212,9 +212,9 @@ WHERE category = 'Classic';
 
 ```sql
 SELECT
-            b.category,
-            SUM(b.rental_price),
-            COUNT(*)
+	b.category,
+	SUM(b.rental_price),
+	COUNT(*)
 FROM books as b
 JOIN
 issued_status as ist
